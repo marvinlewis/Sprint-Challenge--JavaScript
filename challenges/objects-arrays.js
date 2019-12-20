@@ -80,7 +80,8 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
-}
+
+
 
 const universities = [];
 console.log(universities);
@@ -92,19 +93,17 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 
-function contact(graduates){
- for(i = 0; i < graduates.length; i++){
-   return `${graduates.first_name} ${graduates.email}`
- }
+function school (graduates){
+let x = graduates.forEach(function(item) {
+  return item.first_name, item.email
+})
+return x;
+contactInfo.push(x)
 }
-
-
-
-
-
 const contactInfo = [];
 
-contactInfo.push(contact)
+
+
 
 console.log(contactInfo)
 
@@ -137,6 +136,13 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
+
+zooAnimals.forEach(function(current){
+return `Name: ${current.animal_name}, Scientific: ${current.scientific_name}`}
+
+
+
+
 const displayNames = [];
 console.log(displayNames);
 
@@ -146,8 +152,14 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
+function lowerCase (zooAnimals){
+  return zooAnimals.map(function(item){
+    return item.animal_name.toLowerCase()
+  })
+}
+
 const lowCaseAnimalNames = [];
-console.log(lowCaseAnimalNames);
+conso(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
 
@@ -162,6 +174,8 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
+
+
 const populationTotal = 0;
 console.log(populationTotal);
 
