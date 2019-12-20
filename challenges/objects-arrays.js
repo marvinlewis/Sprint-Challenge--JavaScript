@@ -136,14 +136,15 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-function (zoo) {
- return zooAnimals.forEach(function(current){
-return `Name: ${current.animal_name}, Scientific: ${current.scientific_name}`}
-}
 
 
 
-const displayNames = [];
+
+
+const displayNames = zooAnimals.forEach(function(current){
+  return `Name: ${current.animal_name}, Scientific: ${current.scientific_name}`})
+
+
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -152,17 +153,12 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-function lowerCase (zooAnimals){
-  const y = zooAnimals.map(item =>
-    item.animal_name.toLowerCase()
-  );
-
-    lowCaseAnimalNames.push(y);
-
-}
 
 
-const lowCaseAnimalNames = [];
+
+const lowCaseAnimalNames = zooAnimals.map(item =>
+  item.animal_name.toLowerCase())
+
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
